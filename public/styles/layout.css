@@ -36,37 +36,5 @@ body {
   
  }
 
- /* .tweet-container {
-  border: #545149;
-  border-style: solid;
 
- } */
-
- #tweet-footer {
-  justify-content:right;
-  border-top-color: #545149;
-  border-top-width : medium;
-
-  }
-  
-
-  /* all of these need the same format if there a better way */ 
-  .fa-flag{
-  color: darkblue;
-  padding: 5px;
-  }
-  .fa-retweet{
-  color: darkblue;
-  padding: 5px;
-  }
-  .fa-heart{
-  color: darkblue;
-  padding: 5px;
-   }
-
- /* how do I make this allign left ? */
-  #daysago {
-    justify-self:left !important;
-   
-  } 
   
