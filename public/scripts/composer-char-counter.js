@@ -7,7 +7,10 @@ $(document).ready(function() {
   const rem = maxlen - tweetL;
 console.log("keyup",tweetL,rem);
 if (rem < 0) {
-  $(".counter").css('color', 'red');
+  
+$(".counter").addClass("error");
+} else {
+  $(".counter").removeClass("error");
 }
 $(".counter").text(rem);
  });
