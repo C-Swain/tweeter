@@ -27,13 +27,46 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
  main {
-  
+   flex: auto;
    width: 90%;
    margin: auto;
    background-color: #f4f1ec;
    padding: 1.5em;
+   align-items: column;
   
-   
  }
 
+ /* .tweet-container {
+  border: #545149;
+  border-style: solid;
 
+ } */
+
+ #tweet-footer {
+  justify-content:right;
+  border-top-color: #545149;
+  border-top-width : medium;
+
+  }
+  
+
+  /* all of these need the same format if there a better way */ 
+  .fa-flag{
+  color: darkblue;
+  padding: 5px;
+  }
+  .fa-retweet{
+  color: darkblue;
+  padding: 5px;
+  }
+  .fa-heart{
+  color: darkblue;
+  padding: 5px;
+   }
+
+ /* how do I make this allign left ? */
+  #daysago {
+    justify-self:left !important;
+   
+  } 
+  
