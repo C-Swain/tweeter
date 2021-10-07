@@ -6,37 +6,25 @@
 
 $(() => { 
 
-//   // making a get request to see some data
-//   const fetchTweets = () => {
-//     $.ajax({
-//       url: "/api/tweets",
-//       method: "GET",
-//       dataType: "json",
-//       success: (tweets) => {
-//         console.log("data:", tweets)
-//         createBlogs(tweets);
+  // making a get request to see some data
+  const fetchTweets = () => {
+    $.ajax({
+      url: "/tweets",
+      method: "GET",
+      dataType: "json",
+      success: (tweets) => {
+        console.log("data:", tweets)
+        renderTweets(tweets);
   
-//       },
-//       error: (err) => {
-//         console.log(`there was an error: ${err}`)
-//       }
-//     })
-//   }
+      },
+      error: (err) => {
+        console.log(`there was an error: ${err}`)
+      }
+    })
+  }
 
+fetchTweets();
 
-// fetchTweets();
-
-const tweetData = [{
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1461116232227
-}]
 
 const renderTweets = function(tweetData) {
   const $tweetContainer = $(".tweet-container");
@@ -46,6 +34,19 @@ const renderTweets = function(tweetData) {
     const $tweet = createTweetElement(tweet);
     $tweetContainer.prepend($tweet)
   }
+
+  const $newTweet = $(".form-inline");
+  $newTweet.on("submit", function(event) {
+    $("#tweet-text").val("");
+    event.preventDefault();
+    console.log("form was submitted");
+  
+    const serializedData = $(this).serialize();
+    $.post("/tweets", serializedData, (response) => {
+      console.log(response)
+      fetchTweets()
+    }) 
+  })
 
 }
 
@@ -61,7 +62,7 @@ const createTweetElement = function(tweetData)  {
       ${tweetData.content.text}
     </h2>
     <div class="tweet-footer">
-      <p class="days-ago">${tweetData.created_at}</p>
+    <p class="days-ago">${timeago.format(tweetData.created_at)}</p>
       <p class="small-icons">
         <i class="fa fa-flag"></i> 
         <i class="fa fa-retweet"></i>
@@ -71,12 +72,8 @@ const createTweetElement = function(tweetData)  {
   </div>
 </article>`
 
-
   return $tweet
 };  
 
-renderTweets(tweetData);
 
 })
-
-
