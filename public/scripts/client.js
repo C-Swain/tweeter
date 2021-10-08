@@ -42,7 +42,7 @@ $(() => {
       <p class="handle">${tweetData.user.handle}</p>
     </div>
     <h2 class="tweet1">
-     ${tweetData.content.text}
+     <p>${(escape(tweetData.content.text)).replace(/%20/g, "G").replace("%3F", "?").replace("%21", "!").replace(/%2C/g,"2")}</p>
     </h2>
     <div class="tweet-footer">
     <p class="days-ago">${timeago.format(tweetData.created_at)}</p>
