@@ -16,11 +16,11 @@ html {
  */
 
 body {
-
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro','Sans-Serif';
+  padding-top: 3em;
 }
 
 /*
@@ -28,7 +28,7 @@ body {
  */
  main {
    flex: auto;
-   width: 90%;
+   width: 90vw;
    margin: auto;
    background-color: #f4f1ec;
    padding: 1.5em;
