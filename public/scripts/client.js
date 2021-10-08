@@ -4,8 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(() => { 
-
+$(() => {
   // making a get request to see some data
   const fetchTweets = () => {
     $.ajax({
@@ -13,45 +12,29 @@ $(() => {
       method: "GET",
       dataType: "json",
       success: (tweets) => {
-        console.log("data:", tweets)
+        console.log("data:", tweets);
         renderTweets(tweets);
-  
       },
       error: (err) => {
-        console.log(`there was an error: ${err}`)
-      }
-    })
-  }
+        console.log(`there was an error: ${err}`);
+      },
+    });
+  };
 
-fetchTweets();
+  fetchTweets();
 
+  const renderTweets = function (tweetData) {
+    const $tweetContainer = $(".tweet-container");
+    $tweetContainer.empty();
 
-const renderTweets = function(tweetData) {
-  const $tweetContainer = $(".tweet-container");
-  $tweetContainer.empty();
+    for (const tweet of tweetData) {
+      const $tweet = createTweetElement(tweet);
+      $tweetContainer.prepend($tweet);
+    }
+  };
 
-  for (const tweet of tweetData) {
-    const $tweet = createTweetElement(tweet);
-    $tweetContainer.prepend($tweet)
-  }
-
-  const $newTweet = $(".form-inline");
-  $newTweet.on("submit", function(event) {
-    $("#tweet-text").val("");
-    event.preventDefault();
-    console.log("form was submitted");
-  
-    const serializedData = $(this).serialize();
-    $.post("/tweets", serializedData, (response) => {
-      console.log(response)
-      fetchTweets()
-    }) 
-  })
-
-}
-
-const createTweetElement = function(tweetData)  {
-  const $tweet = `<article class="tweets-container">
+  const createTweetElement = function (tweetData) {
+    const $tweet = `<article class="tweets-container">
   <div class="tweet">
     <div class="tweet-header">
       <img src="${tweetData.user.avatars}" class="tweeter-icon" />
@@ -59,7 +42,7 @@ const createTweetElement = function(tweetData)  {
       <p class="handle">${tweetData.user.handle}</p>
     </div>
     <h2 class="tweet1">
-      ${tweetData.content.text}
+     ${tweetData.content.text}
     </h2>
     <div class="tweet-footer">
     <p class="days-ago">${timeago.format(tweetData.created_at)}</p>
@@ -70,10 +53,24 @@ const createTweetElement = function(tweetData)  {
       </p>
     </div>
   </div>
-</article>`
+</article>`;
 
-  return $tweet
-};  
+    return $tweet;
+  };
 
-
-})
+  const $newTweet = $(".form-inline");
+  $newTweet.on("submit", function (event) {
+    event.preventDefault();
+    console.log("form was submitted");
+    const tweetText = $("#tweet-text").val();
+    if (tweetText === "" || tweetText === null) {
+      return alert("This tweet is empty! please try again");
+    }
+    const serializedData = $(this).serialize();
+    $.post("/tweets", serializedData, (response) => {
+      $("#tweet-text").val("");
+      console.log(response);
+      fetchTweets();
+    });
+  });
+});
