@@ -66,6 +66,9 @@ $(() => {
     if (tweetText === "" || tweetText === null) {
       return alert("This tweet is empty! please try again");
     }
+    if (tweetText.length > 140 ) {
+      return alert(" Please , respect our abitray 140 char limit! ")
+    }
     const serializedData = $(this).serialize();
     $.post("/tweets", serializedData, (response) => {
       $("#tweet-text").val("");
