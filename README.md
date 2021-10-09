@@ -3,6 +3,10 @@
 Tweeter is a simple, single-page Twitter clone.
 This was built using code suplied from Lighthouse labs with html and css suplimented by Catherine Swain : Lighthouse Labber. 
 
+## A sneak peak!
+![small screen](https://github.com/C-Swain/tweeter/blob/6e07fd7f8ecac6acd5771ce631e546702582c5b9/screenshots/portrait.png)
+![large screen](https://github.com/C-Swain/tweeter/blob/6e07fd7f8ecac6acd5771ce631e546702582c5b9/screenshots/Screenshot%20from%202021-10-09%2010-40-03.png)
+
 
 
 ## Getting Started
