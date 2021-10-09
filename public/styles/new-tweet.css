@@ -202,13 +202,13 @@ article {
   }
 
   article {
-    padding: 2em;
+    padding: 1em;
     font-size: 15px;
     color: black;
     font-style: normal;
   }
 
-  .tweet1 {
+  #tweet1 {
     font-weight: normal;
     margin-left: 20px !important;
   }
