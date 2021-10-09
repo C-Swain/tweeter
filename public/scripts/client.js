@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 $(() => {
   // making a get request to see some data
   const fetchTweets = () => {
@@ -52,8 +53,8 @@ $(() => {
         <i class="fa fa-heart"></i>
       </p>
     </div>
-  </div>
-</article>`;
+   </div>
+ </article>`;
 
     return $tweet;
   };
@@ -79,8 +80,10 @@ $(() => {
     
     $.post("/tweets", serializedData, (response) => {
       $("#tweet-text").val("");
+      $(".counter").text("140");
       console.log(response);
       fetchTweets();
+    
     });
   });
 });
