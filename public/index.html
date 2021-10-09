@@ -10,7 +10,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Tweeter - Home Page ******</title>
+    <title>Tweeter - Home Page </title>
 
     <!-- External CSS -->
     <link
@@ -20,7 +20,8 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
       rel="stylesheet"
     />
 
@@ -32,10 +33,18 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js" ></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
   </head>
 
   <body>
@@ -48,28 +57,22 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-
-    <header class="main-header">
-      <div>
+    <div>
+      <header class="main-header">
         <img class="profile-img" src="/images/profile-hex.png" alt="Profile" />
-      </div>
-      <br />
-      <div>
         <h2>Catherine Swain</h2>
-      </div>
-    </header>
+      </header>
+    </div> 
+    
 
     <!-- Page-specific (main) content here -->
     <script
       type="text/javascript"
       src="/scripts/composer-char-counter.js"
     ></script>
-
     <main class="container">
-      <div></div>
-      <div id="error"> </div>
+      <div id="error"></div>
       <section class="new-tweet">
-         
         <form class="form-inline" action="/tweets" method="POST">
           <textarea
             name="text"
@@ -82,11 +85,8 @@
           </footer>
         </form>
       </section>
-      <section class="tweet-container">
-      </section>
+      </div>
+      <section class="tweet-container"></section>
     </main>
   </body>
 </html>
-
-
-

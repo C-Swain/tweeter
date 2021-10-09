@@ -1,0 +1,218 @@
+
+
+footer {
+  margin: 1em;
+}
+.counter {
+  float: right;
+  font-family: 'Bungee', 'sans-serif'; 
+}
+
+.submit {
+
+  font-family: 'Bungee', 'sans-serif';
+  color: white;
+  background-color: #4056a1;
+  
+}
+
+
+#tweet-text {
+
+  width: 100%;
+  background-color: transparent;
+  color: black;
+  outline: 0;
+  border-color: black;
+  border: none;
+  border-bottom: 2px solid gray;
+  resize: none;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 10px;
+  font-family: 'Source Sans Pro', 'sans-serif';
+  
+}
+
+article {
+  padding: 1em;
+  flex-shrink: initial;
+  font-size: 16px;
+  color: black;
+  font-style: normal;
+}
+
+.btn-and-input {
+  display: none;
+  width: 80%;
+}
+
+
+ article:hover{
+  box-shadow: 0.5rem 0.5rem darkgray, -0.5rem -0.5rem #ccc;
+ }
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweeter-name {
+  margin-right: auto;
+  font-size: 1.7em;
+  font-style: bold;
+  padding-left: 3em;
+}
+
+.tweet .tweeter-icon {
+  height: 100px;
+  opacity: .5;
+}
+
+.tweet-footer {
+  border-top: 2px solid gray;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  font-size: 20px;
+
+}
+
+.days-ago {
+  margin-right: auto;
+  margin-left: 2em;
+
+}
+
+.tweet1 {
+  font-weight: normal;
+  margin-left: 1em;
+ 
+}
+
+.tweet {
+  font-size: 1em;
+  color: black;
+  border: .3em solid gray;
+  word-wrap: break-word;
+  padding:.75em;
+  margin: .2em;
+  
+}
+
+.handle {
+  font-size: 1.7em;
+  color: #545149;
+  margin-right: 20px;
+}
+
+.small-icons i {
+  margin-left: 10px;
+  color: #4056a1;
+}
+
+.fa:hover{
+  color: goldenrod;
+}
+
+.error {
+ color: tomato;
+}
+
+.flex-container {
+  width: 100%;
+}
+
+#error {
+  transition: all .5s ease-in-out;
+  font-size:1em !important;
+  border: 3em;
+  color: crimson;
+  font-size: medium;
+  position: relative;
+  margin-top: 10px;
+  align-items: center;
+  
+}
+
+
+@media (min-width: 1250px) {
+  
+  nav {
+    display: flex;
+    color: #FFFFFF;
+    background-color: #4056A1;
+    margin: 0;
+    height: 120px;
+    width: 100vw;
+    font-size: 30px;
+    font-family: 'Bungee', 'sans-serif';
+    justify-content: space-between;
+    position: fixed !important; 
+    padding: 1.5em;
+  }
+  
+  #secondbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  .fa-angles-down {
+    color:  tomato ;
+  }
+
+  body {
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content:left;
+    flex-direction: row;
+  }
+  
+
+  main {
+    display: flex;
+    width: 60vw;
+    background-color: #f4f1ec;
+    padding-top: 175px;
+    justify-content:space-evenly;
+    justify-self: middle;
+    flex-direction: column;
+    flex-wrap: wrap;
+   
+  }
+
+
+  .main-header {
+  
+    color: #e8e8f1;
+    background-color: #61a1e6;
+    background-image: url("https://www.transparenttextures.com/patterns/shley-tree-2.png");
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 2;
+    justify-content: flex-start;
+    align-self: right ;
+    height: 650px;
+    width: 30vw;
+    font-size: 30px;
+    font-family: 'Source Sans Pro','Sans-Serif';
+  
+  }
+
+  article {
+    padding: 2em;
+    font-size: 15px;
+    color: black;
+    font-style: normal;
+  }
+
+  .tweet1 {
+    font-weight: normal;
+    margin-left: 20px !important;
+  }
+  
+ 
+
+} 

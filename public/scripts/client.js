@@ -42,7 +42,7 @@ $(() => {
       <p class="handle">${tweetData.user.handle}</p>
     </div>
     <h2 class="tweet1">
-      <p>${(tweetData.content.text)}</p>
+      <p id="tweet-content">${(tweetData.content.text)}</p>
     </h2>
     <div class="tweet-footer">
     <p class="days-ago">${timeago.format(tweetData.created_at)}</p>
